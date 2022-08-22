@@ -325,7 +325,7 @@ GPPstack20 <- stack(medGPPwin20,medGPPspr20,medGPPsum20,medGPPfal20)  ##Stack 20
 
 
 
-### Create 30m grassland boundary raster for each year using an EVI raster as a "cookie cutter" for use in all SPI down-scaling for every season in each year
+### Create 30m grassland boundary raster for each year using an EVI raster as a "cookie cutter" for use in all SPI up-scaling for every season in each year
 raster30m2005 <- stack(medEVIwin05) 
 raster30m2006 <- stack(medEVIwin06)
 raster30m2007 <- stack(medEVIwin07) 
@@ -344,97 +344,97 @@ raster30m2019 <- stack(medEVIwin19)
 raster30m2020 <- stack(medEVIwin20) 
 
 
-##Down-scale SPI to 30 meters and clip to grassland area (2005)
+##Up-scale SPI to 30 meters and clip to grassland area (2005)
 masked2005winSPI <- mask(projectRaster(setExtent(spi2005stack$SPI1yMed05win, raster30m2005, keepres=FALSE, snap=FALSE),raster30m2005), raster30m2005)
 masked2005sprSPI <- mask(projectRaster(setExtent(spi2005stack$SPI1yMed05spr, raster30m2005, keepres=FALSE, snap=FALSE),raster30m2005), raster30m2005) 
 masked2005summSPI <- mask(projectRaster(setExtent(spi2005stack$SPI1yMed05sum, raster30m2005, keepres=FALSE, snap=FALSE),raster30m2005), raster30m2005) 
 masked2005falSPI <- mask(projectRaster(setExtent(spi2005stack$SPI1yMed05fal, raster30m2005, keepres=FALSE, snap=FALSE),raster30m2005), raster30m2005) 
 
-##Down-scale SPI to 30 meters and clip to grassland area (2006)
+##Up-scale SPI to 30 meters and clip to grassland area (2006)
 masked2006winSPI <- mask(projectRaster(setExtent(spi2006stack$SPI1yMed06win, raster30m2006, keepres=FALSE, snap=FALSE),raster30m2006), raster30m2006)
 masked2006sprSPI <- mask(projectRaster(setExtent(spi2006stack$SPI1yMed06spr, raster30m2006, keepres=FALSE, snap=FALSE),raster30m2006), raster30m2006) 
 masked2006summSPI <- mask(projectRaster(setExtent(spi2006stack$SPI1yMed06sum, raster30m2006, keepres=FALSE, snap=FALSE),raster30m2006), raster30m2006) 
 masked2006falSPI <- mask(projectRaster(setExtent(spi2006stack$SPI1yMed06fal, raster30m2006, keepres=FALSE, snap=FALSE),raster30m2006), raster30m2006) 
 
-##Down-scale SPI to 30 meters and clip to grassland area (2007)
+##Up-scale SPI to 30 meters and clip to grassland area (2007)
 masked2007winSPI <- mask(projectRaster(setExtent(spi2007stack$SPI1yMed07win, raster30m2007, keepres=FALSE, snap=FALSE),raster30m2007), raster30m2007) 
 masked2007sprSPI <- mask(projectRaster(setExtent(spi2007stack$SPI1yMed07spr, raster30m2007, keepres=FALSE, snap=FALSE),raster30m2007), raster30m2007) 
 masked2007summSPI <- mask(projectRaster(setExtent(spi2007stack$SPI1yMed07sum, raster30m2007, keepres=FALSE, snap=FALSE),raster30m2007), raster30m2007) 
 masked2007falSPI <- mask(projectRaster(setExtent(spi2007stack$SPI1yMed07fal, raster30m2007, keepres=FALSE, snap=FALSE),raster30m2007), raster30m2007) 
 
-##Down-scale SPI to 30 meters and clip to grassland area (2008)
+##Up-scale SPI to 30 meters and clip to grassland area (2008)
 masked2008winSPI <- mask(projectRaster(setExtent(spi2008stack$SPI1yMed08win, raster30m2008, keepres=FALSE, snap=FALSE),raster30m2008), raster30m2008) 
 masked2008sprSPI <- mask(projectRaster(setExtent(spi2008stack$SPI1yMed08spr, raster30m2008, keepres=FALSE, snap=FALSE),raster30m2008), raster30m2008) 
 masked2008summSPI <- mask(projectRaster(setExtent(spi2008stack$SPI1yMed08sum, raster30m2008, keepres=FALSE, snap=FALSE),raster30m2008), raster30m2008)
 masked2008falSPI <- mask(projectRaster(setExtent(spi2008stack$SPI1yMed08fal, raster30m2008, keepres=FALSE, snap=FALSE),raster30m2008), raster30m2008) 
 
-##Down-scale SPI to 30 meters and clip to grassland area (2009)
+##Up-scale SPI to 30 meters and clip to grassland area (2009)
 masked2009winSPI <- mask(projectRaster(setExtent(spi2009stack$SPI1yMed09win, raster30m2009, keepres=FALSE, snap=FALSE),raster30m2009), raster30m2009) 
 masked2009sprSPI <- mask(projectRaster(setExtent(spi2009stack$SPI1yMed09spr, raster30m2009, keepres=FALSE, snap=FALSE),raster30m2009), raster30m2009) 
 masked2009summSPI <- mask(projectRaster(setExtent(spi2009stack$SPI1yMed09sum, raster30m2009, keepres=FALSE, snap=FALSE),raster30m2009), raster30m2009) 
 masked2009falSPI <- mask(projectRaster(setExtent(spi2009stack$SPI1yMed09fal, raster30m2009, keepres=FALSE, snap=FALSE),raster30m2009), raster30m2009) 
 
-##Down-scale SPI to 30 meters and clip to grassland area (2010)
+##Up-scale SPI to 30 meters and clip to grassland area (2010)
 masked2010winSPI <- mask(projectRaster(setExtent(spi2010stack$SPI1yMed10win, raster30m2010, keepres=FALSE, snap=FALSE),raster30m2010), raster30m2010) 
 masked2010sprSPI <- mask(projectRaster(setExtent(spi2010stack$SPI1yMed10spr, raster30m2010, keepres=FALSE, snap=FALSE),raster30m2010), raster30m2010) 
 masked2010summSPI <- mask(projectRaster(setExtent(spi2010stack$SPI1yMed10sum, raster30m2010, keepres=FALSE, snap=FALSE),raster30m2010), raster30m2010) 
 masked2010falSPI <- mask(projectRaster(setExtent(spi2010stack$SPI1yMed10fal, raster30m2010, keepres=FALSE, snap=FALSE),raster30m2010), raster30m2010) 
 
-##Down-scale SPI to 30 meters and clip to grassland area (2011)  ##Entirety of Cimarron county is at SPI minimum for Fall 2011
+##Up-scale SPI to 30 meters and clip to grassland area (2011)  ##Entirety of Cimarron county is at SPI minimum for Fall 2011
 masked2011winSPI <- mask(projectRaster(setExtent(spi2011stack$SPI1yMed11win, raster30m2011, keepres=FALSE, snap=FALSE),raster30m2011), raster30m2011) 
 masked2011sprSPI <- mask(projectRaster(setExtent(spi2011stack$SPI1yMed11spr, raster30m2011, keepres=FALSE, snap=FALSE),raster30m2011), raster30m2011) 
 masked2011summSPI <- mask(projectRaster(setExtent(spi2011stack$SPI1yMed11sum, raster30m2011, keepres=FALSE, snap=FALSE),raster30m2011), raster30m2011) 
 masked2011falSPI <- mask(projectRaster(setExtent(spi2011stack$SPI1yMed11fal, raster30m2011, keepres=FALSE, snap=FALSE),raster30m2011), raster30m2011) 
 
-##Down-scale SPI to 30 meters and clip to grassland area (2012)
+##Up-scale SPI to 30 meters and clip to grassland area (2012)
 masked2012winSPI <- mask(projectRaster(setExtent(spi2012stack$SPI1yMed12win, raster30m2012, keepres=FALSE, snap=FALSE),raster30m2012), raster30m2012) 
 masked2012sprSPI <- mask(projectRaster(setExtent(spi2012stack$SPI1yMed12spr, raster30m2012, keepres=FALSE, snap=FALSE),raster30m2012), raster30m2012) 
 masked2012summSPI <- mask(projectRaster(setExtent(spi2012stack$SPI1yMed12sum, raster30m2012, keepres=FALSE, snap=FALSE),raster30m2012), raster30m2012) 
 masked2012falSPI <- mask(projectRaster(setExtent(spi2012stack$SPI1yMed12fal, raster30m2012, keepres=FALSE, snap=FALSE),raster30m2012), raster30m2012)
 
-##Down-scale SPI to 30 meters and clip to grassland area (2013)
+##Up-scale SPI to 30 meters and clip to grassland area (2013)
 masked2013winSPI <- mask(projectRaster(setExtent(spi2013stack$SPI1yMed13win, raster30m2013, keepres=FALSE, snap=FALSE),raster30m2013), raster30m2013) 
 masked2013sprSPI <- mask(projectRaster(setExtent(spi2013stack$SPI1yMed13spr, raster30m2013, keepres=FALSE, snap=FALSE),raster30m2013), raster30m2013) 
 masked2013summSPI <- mask(projectRaster(setExtent(spi2013stack$SPI1yMed13sum, raster30m2013, keepres=FALSE, snap=FALSE),raster30m2013), raster30m2013)
 masked2013falSPI <- mask(projectRaster(setExtent(spi2013stack$SPI1yMed13fal, raster30m2013, keepres=FALSE, snap=FALSE),raster30m2013), raster30m2013) 
 
-##Down-scale SPI to 30 meters and clip to grassland area (2014)
+##Up-scale SPI to 30 meters and clip to grassland area (2014)
 masked2014winSPI <- mask(projectRaster(setExtent(spi2014stack$SPI1yMed14win, raster30m2014, keepres=FALSE, snap=FALSE),raster30m2014), raster30m2014) 
 masked2014sprSPI <- mask(projectRaster(setExtent(spi2014stack$SPI1yMed14spr, raster30m2014, keepres=FALSE, snap=FALSE),raster30m2014), raster30m2014) 
 masked2014summSPI <- mask(projectRaster(setExtent(spi2014stack$SPI1yMed14sum, raster30m2014, keepres=FALSE, snap=FALSE),raster30m2014), raster30m2014) 
 masked2014falSPI <- mask(projectRaster(setExtent(spi2014stack$SPI1yMed14fal, raster30m2014, keepres=FALSE, snap=FALSE),raster30m2014), raster30m2014) 
 
-##Down-scale SPI to 30 meters and clip to grassland area (2015)
+##Up-scale SPI to 30 meters and clip to grassland area (2015)
 masked2015winSPI <- mask(projectRaster(setExtent(spi2015stack$SPI1yMed15win, raster30m2015, keepres=FALSE, snap=FALSE),raster30m2015), raster30m2015)
 masked2015sprSPI <- mask(projectRaster(setExtent(spi2015stack$SPI1yMed15spr, raster30m2015, keepres=FALSE, snap=FALSE),raster30m2015), raster30m2015) 
 masked2015summSPI <- mask(projectRaster(setExtent(spi2015stack$SPI1yMed15sum, raster30m2015, keepres=FALSE, snap=FALSE),raster30m2015), raster30m2015) 
 masked2015falSPI <- mask(projectRaster(setExtent(spi2015stack$SPI1yMed15fal, raster30m2015, keepres=FALSE, snap=FALSE),raster30m2015), raster30m2015) 
 
-##Down-scale SPI to 30 meters and clip to grassland area (2016)
+##Up-scale SPI to 30 meters and clip to grassland area (2016)
 masked2016winSPI <- mask(projectRaster(setExtent(spi2016stack$SPI1yMed16win, raster30m2016, keepres=FALSE, snap=FALSE),raster30m2016), raster30m2016)
 masked2016sprSPI <- mask(projectRaster(setExtent(spi2016stack$SPI1yMed16spr, raster30m2016, keepres=FALSE, snap=FALSE),raster30m2016), raster30m2016) 
 masked2016summSPI <- mask(projectRaster(setExtent(spi2016stack$SPI1yMed16sum, raster30m2016, keepres=FALSE, snap=FALSE),raster30m2016), raster30m2016)
 masked2016falSPI <- mask(projectRaster(setExtent(spi2016stack$SPI1yMed16fal, raster30m2016, keepres=FALSE, snap=FALSE),raster30m2016), raster30m2016) 
 
-##Down-scale SPI to 30 meters and clip to grassland area (2017)
+##Up-scale SPI to 30 meters and clip to grassland area (2017)
 masked2017winSPI <- mask(projectRaster(setExtent(spi2017stack$SPI1yMed17win, raster30m2017, keepres=FALSE, snap=FALSE),raster30m2017), raster30m2017) 
 masked2017sprSPI <- mask(projectRaster(setExtent(spi2017stack$SPI1yMed17spr, raster30m2017, keepres=FALSE, snap=FALSE),raster30m2017), raster30m2017) 
 masked2017summSPI <- mask(projectRaster(setExtent(spi2017stack$SPI1yMed17sum, raster30m2017, keepres=FALSE, snap=FALSE),raster30m2017), raster30m2017) 
 masked2017falSPI <- mask(projectRaster(setExtent(spi2017stack$SPI1yMed17fal, raster30m2017, keepres=FALSE, snap=FALSE),raster30m2017), raster30m2017) 
 
-##Down-scale SPI to 30 meters and clip to grassland area (2018)
+##Up-scale SPI to 30 meters and clip to grassland area (2018)
 masked2018winSPI <- mask(projectRaster(setExtent(spi2018stack$SPI1yMed18win, raster30m2018, keepres=FALSE, snap=FALSE),raster30m2018), raster30m2018) 
 masked2018sprSPI <- mask(projectRaster(setExtent(spi2018stack$SPI1yMed18spr, raster30m2018, keepres=FALSE, snap=FALSE),raster30m2018), raster30m2018)
 masked2018summSPI <- mask(projectRaster(setExtent(spi2018stack$SPI1yMed18sum, raster30m2018, keepres=FALSE, snap=FALSE),raster30m2018), raster30m2018) 
 masked2018falSPI <- mask(projectRaster(setExtent(spi2018stack$SPI1yMed18fal, raster30m2018, keepres=FALSE, snap=FALSE),raster30m2018), raster30m2018) 
 
-##Down-scale SPI to 30 meters and clip to grassland area (2019)
+##Up-scale SPI to 30 meters and clip to grassland area (2019)
 masked2019winSPI <- mask(projectRaster(setExtent(spi2019stack$SPI1yMed19win, raster30m2019, keepres=FALSE, snap=FALSE),raster30m2019), raster30m2019) 
 masked2019sprSPI <- mask(projectRaster(setExtent(spi2019stack$SPI1yMed19spr, raster30m2019, keepres=FALSE, snap=FALSE),raster30m2019), raster30m2019) 
 masked2019summSPI <- mask(projectRaster(setExtent(spi2019stack$SPI1yMed19sum, raster30m2019, keepres=FALSE, snap=FALSE),raster30m2019), raster30m2019) 
 masked2019falSPI <- mask(projectRaster(setExtent(spi2019stack$SPI1yMed19fal, raster30m2019, keepres=FALSE, snap=FALSE),raster30m2019), raster30m2019) 
 
-##Down-scale SPI to 30 meters and clip to grassland area (2020)
+##Up-scale SPI to 30 meters and clip to grassland area (2020)
 masked2020winSPI <- mask(projectRaster(setExtent(spi2020stack$SPI1yMed20win, raster30m2020, keepres=FALSE, snap=FALSE),raster30m2020), raster30m2020) 
 masked2020sprSPI <- mask(projectRaster(setExtent(spi2020stack$SPI1yMed20sum, raster30m2020, keepres=FALSE, snap=FALSE),raster30m2020), raster30m2020) 
 masked2020summSPI <- mask(projectRaster(setExtent(spi2020stack$SPI1yMed20spr, raster30m2020, keepres=FALSE, snap=FALSE),raster30m2020), raster30m2020) 
